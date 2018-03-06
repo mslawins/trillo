@@ -1,0 +1,12 @@
+.user-reviews {
+  flex: 0 1 40%;
+
+  :not(:last-child) {
+    margin-bottom: 3.5rem;
+  }
+
+  .review {
+    background-color: white;
+  }
+}
+
