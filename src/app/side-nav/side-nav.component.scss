@@ -1,0 +1,48 @@
+.side-nav {
+  height: 100%;
+  flex: 0 0 18%;
+  background-color: var(--color-gray-dark-1); 
+  font-size: 1.4rem;
+
+  display: flex;
+  flex-flow: column;
+
+  ul {
+    flex-grow: 1;
+    list-style: None;
+    color: white;
+    margin-top: 3.5rem;
+    text-transform: uppercase;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      padding: 1.5rem 3rem;
+      margin-bottom: .5rem;
+
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        background-color: var(--color-primary);
+      }
+
+      .nav-icon {
+        width: 1.75rem;
+        height: 1.75rem;
+
+        margin-right: 2rem;
+
+        fill: white;
+      }
+    }
+  }
+
+  .legal {
+    color: var(--color-gray-light-4);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem;
+  }
+}
