@@ -1,0 +1,59 @@
+.container {
+  padding: 3.5rem 0;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  .info {
+    font-size: 2rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+
+  .book-now {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 7.5rem;
+
+    background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+    cursor: pointer;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+
+    .text {
+      color: white;
+      font-weight: lighter;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .before {
+      transition: all .2s;
+    }
+
+    .after {
+      position: absolute;
+      top: -100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      transition: all .2s;
+    }
+
+    &:hover {
+      background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+
+      .before {
+        transform: translateY(500%);
+      }
+
+      .after {
+        top: 50%;
+      }
+    }
+  }  
+}
