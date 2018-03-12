@@ -1,5 +1,11 @@
+@import 'src/app/media-query-manager';
+
 .container {
   display: flex;
+
+  @include respond-to(bp-medium) {
+    flex-flow: column;
+  }
 
   .main {
     background-color: var(--color-gray-light-1); 
@@ -11,4 +17,14 @@
   background-color: var(--color-gray-light-2);
   padding: 4.5rem;
   display: flex;
+
+  @include respond-to(bp-small) {
+    flex-flow: column;
+  }
+
+  ms-reviews {
+    @include respond-to(bp-small) {
+      margin-top: 3.5rem;
+    }
+  }
 }

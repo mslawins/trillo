@@ -1,3 +1,5 @@
+@import 'src/app/media-query-manager';
+
 .side-nav {
   height: 100%;
   flex: 0 0 18%;
@@ -14,6 +16,12 @@
     margin-top: 3.5rem;
     text-transform: uppercase;
 
+    @include respond-to(bp-medium) {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0;
+    }
+
     li {
       display: flex;
       align-items: center;
@@ -22,6 +30,13 @@
       margin-bottom: .5rem;
 
       cursor: pointer;
+
+      @include respond-to(bp-medium) {
+        flex: 0 0 25%;
+        margin-bottom: 0;
+        padding: 2rem 3rem;
+        justify-content: center;
+      }
 
       &:hover,
       &.active {
@@ -44,6 +59,10 @@
     font-size: 1rem;
     text-align: center;
     padding: 2.5rem;
+
+    @include respond-to(bp-medium) {
+      display: none;
+    }
 
     a {
       color: var(--color-gray-light-3);

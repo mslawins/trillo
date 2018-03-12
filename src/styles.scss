@@ -1,3 +1,5 @@
+@import 'src/app/media-query-manager';
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,10 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @include respond-to(bp-large) {
+    font-size: 50%;
+  }
 }
 
 :root {

@@ -1,7 +1,15 @@
+@import 'src/app/media-query-manager';
+
 .container {
   max-width: var(--content-width);
   margin: 8rem auto;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, .3);
 
   background-color: white;
+
+  @include respond-to(bp-very-large) {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 100%;
+  }
 }

@@ -1,3 +1,5 @@
+@import 'src/app/media-query-manager';
+
 .container {
   height: 100%;
 
@@ -7,6 +9,10 @@
   background-color: white;
   box-shadow: var(--shadow);
   padding: 3rem;
+
+  @include respond-to(bp-small) {
+    margin-right: 0;
+  }
 
   p + p {
     margin-top: 2rem;
