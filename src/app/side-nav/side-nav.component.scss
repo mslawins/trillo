@@ -23,6 +23,7 @@
     }
 
     li {
+      position: relative;
       display: flex;
       align-items: center;
 
@@ -38,8 +39,30 @@
         justify-content: center;
       }
 
-      &:hover,
       &.active {
+        background-color: var(--color-primary);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+        width: 3px;
+        
+        background-color: var(--color-primary);
+        transform: scaleY(0);
+
+        transition: width .4s ease-out .2s,
+                    transform .2s,
+                    background-color .1s;
+      } 
+
+      &:hover::after {
+        width: 100%; 
+        transform: scaleY(1);
         background-color: var(--color-primary);
       }
 
@@ -50,6 +73,11 @@
         margin-right: 2rem;
 
         fill: white;
+      }
+
+      .nav-icon,
+      span {
+        z-index: 100;
       }
     }
   }
